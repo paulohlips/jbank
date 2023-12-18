@@ -1,6 +1,8 @@
-package entity;
+package entity.account;
 
-public class Account {
+import entity.Customer;
+
+abstract  public class Account {
     private int number;
     private double balance;
     private Customer customer;
