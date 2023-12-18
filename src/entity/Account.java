@@ -22,4 +22,23 @@ public class Account {
     public int getNumber() {
         return number;
     }
+
+    @Override
+    public String toString() {
+        return "Account number: " + this.getNumber() + "\nAccount Customer: " + this.customer.getName();
+    }
+
+    public void deposit(double value) {
+        this.balance += value;
+    }
+
+    public double withDraw(double value) {
+        if (balance < value) {
+            throw new Error("Insufficient funds");
+        }
+
+        balance -= value;
+
+        return this.getBalance();
+    }
 }
